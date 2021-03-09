@@ -1,22 +1,25 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side">
-    <mat-toolbar>
-      <span color="primary">
-        Menu
-      </span>
+    <mat-toolbar color="primary">
+      Menu
     </mat-toolbar>
+    <app-sidebar></app-sidebar>
   </mat-sidenav>
-
+  
   <mat-sidenav-content>
-    <app-header></app-header>
+    
+    <app-header (toggleSidenav)="sidenav.toggle()">
+
+    </app-header>
     <router-outlet>
 
     </router-outlet>
+    <app-footer>
+
+    </app-footer>
+    
   </mat-sidenav-content>
-
-  <app-footer>
-
-  </app-footer>
+  
+  
 
 </mat-sidenav-container>
-<button class="btn btn-primary">funciona</button>
